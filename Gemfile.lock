@@ -1,0 +1,13 @@
+GEM
+  remote: https://www.rubygems.org/
+  specs:
+    gosu (0.11.1-x64-mingw32)
+
+PLATFORMS
+  x64-mingw32
+
+DEPENDENCIES
+  gosu
+
+BUNDLED WITH
+   1.14.3
