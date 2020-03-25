@@ -112,6 +112,7 @@ module CPU
 		def emulate
 			get_opcode
 			increase_pc
+
 			# Checking if the MSB is 8 or F E 0
 			case (@opcode&0xF000)
 			when 0x8000
@@ -125,6 +126,11 @@ module CPU
 			else
 				operation = (@opcode&0xF000)
 			end
+                        print("pc :"); print(@regs['PC']); print("\n");
+                        print("opcode :"); print(@opcode); print("\n");
+                        print("operation: "); print(operation); print("\n");
+                        sleep(0.2);
+
 			send(CPU::OPERATION_LIST::OPERATION[operation])
 			update_timers
 		end
